@@ -1,0 +1,21 @@
+<% provide(:title, 'New Book') %>
+
+<div class="hero-unit-white">
+
+<h1>New Book</h1>
+
+<%= form_for(@book, :html => { :multipart => true }) do |f| %>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@book) do |f| %>
+
+      <%= f.label :isbn, "ISBN" %>
+      <%= f.text_field :isbn %>
+      <br></br>
+      <%= f.submit "Create", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+<% end %>
+ </div>

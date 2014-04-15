@@ -1,0 +1,58 @@
+<% provide(:title, @user.name) %>
+
+<div class="hero-unit-white">
+
+<div id="contactinfo">
+  <h1><%= @user.name %></h1>
+
+  <% if @user == current_user %>
+
+  <h2><%= @user.email %></h2>
+
+  <!-- 
+Contact Details
+ -->
+
+   <p><b>Address:</b> <%= @user.address1 %> </p>
+   <p><b>P.O.Box:</b> <%= @user.pobox %> </p>
+   <p><b>Phone:</b> <%= @user.phone %> </p>
+</div>
+
+<div id="usersbooks">
+  <h3> My Books </h3>
+  <ul id="booklist" class="posts">
+    <% current_sale.each do |sale| %>
+      <li>
+        <td><img src=<%=Book.find(sale.book_id).photo%>> <%= link_to Book.find(sale.book_id).name, sale %> <% link_to sale %></td>
+            <% if sale.user_id != nil %>
+              <p></p> Purchased by <%= User.find(sale.user_id).name %>
+            <% else %>
+              <p></p> <%= link_to "Edit", edit_sale_path(sale) %>
+              <p></p> <%= link_to "Delete", sale, method: :delete, confirm: "You sure?" %>
+            <% end %>
+      </li>
+    <% end %> 
+  </ul>
+
+  <br></br>
+
+
+  <h3>Interests</h3>
+  <ul id="booklist" class="sales">
+  	<% @sales.each do |sale| %>
+      <% if sale.user_id == @user.id %>
+  		  <li>
+      		<td><img src=<%=Book.find(sale.book_id).photo%>><%= link_to Book.find(sale.book_id).name, sale %> <% link_to sale %>
+          <p></p> Purchased from <%= link_to User.find(sale.owner_id).name, User.find(sale.owner_id) %></td>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+
+  <br></br>
+
+  <% else %>
+
+  <% end %>
+</div>
+</div>

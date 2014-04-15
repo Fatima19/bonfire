@@ -1,0 +1,26 @@
+<% provide(:title, 'My Address') %> 
+<h1>Contact</h1>
+
+<div class="hero-unit-white">
+
+<h1>My Address</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+
+      <%= f.label :address1, "Address" %>
+      <%= f.text_field :address1 %>
+
+      <%= f.label :pobox, "P.O.Box" %>
+      <%= f.text_field :pobox %>
+
+      <%= f.label :phone, "Mobile Number" %>
+      <%= f.text_field :phone %>
+
+      <%= f.submit "Save", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+</div>

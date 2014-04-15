@@ -1,0 +1,75 @@
+<% provide(:title, Book.find(@sale.book_id).name) %>
+
+<div class="hero-unit-white">
+<div id="bookpage">
+
+  <h4><%= Book.find(@sale.book_id).name %></h4>
+
+  <% if @sale.user_id == nil %>
+    <h3>For Sale
+  <% else %>
+    <h3>Sold
+  <% end %>
+  , Selling Price: QR <%= @sale.price %> ,
+  Condition: <%= @sale.condition %></h3>
+
+  <% if @sale.charity != nil && @sale.charity!="" %>
+  <h5>Proceeds go to: <%= @sale.charity %></h5>
+  <% end %>
+
+  <p><%= Book.find(@sale.book_id).description.html_safe %></p>
+
+<!-- @sale.owner_id.to_i != current_user.id.to_i && 
+ -->
+</div>
+<br></br>
+
+  <% if !signed_in? %>
+    <%= link_to "Purchase", login_path, class: "btn btn-large btn-primary" %>
+  <% elsif @sale.user_id == nil %>
+    <%= link_to "Purchase", purchase_path, class: "btn btn-large btn-primary" %>
+  <%end %>
+
+
+<!-- @sale.owner_id.to_i == current_user.id.to_i &&
+ -->
+  <% if signed_in? && @sale.user_id==nil %>
+    <br></br>
+    <%= link_to 'Edit Sale', edit_sale_path(@sale) %>
+    <br></br>
+  <% end %>
+
+  <div class="sale_unit">
+    
+    <img src=<%=Book.find(@sale.book_id).photo%> alt=<%=Book.find(@sale.book_id).name%>>
+    <br></br>
+  </div>
+
+  <div class="book_data">
+    <p>
+      <b>ISBN:</b>
+      <%= Book.find(@sale.book_id).isbn %>
+    </p>
+    <p>
+      <b>Author:</b>
+      <%= Book.find(@sale.book_id).author %>
+    </p>
+    <p>
+      <b>Edition:</b>
+      <% if Book.find(@sale.book_id).edition == 0 %>
+      N/A
+      <% else %>
+      <%= Book.find(@sale.book_id).edition %>
+      <% end %>
+    </p>
+    <p>
+      <b>Retail Price:</b>
+      <% if Book.find(@sale.book_id).retail_price == 0 %>
+      N/A
+      <% else %>
+      QR <%= Book.find(@sale.book_id).retail_price %>
+      <% end %>
+    </p>
+  </div>
+</div>
+

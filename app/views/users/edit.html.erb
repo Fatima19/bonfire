@@ -1,0 +1,35 @@
+<% provide(:title, "Update Profile") %> 
+<div class="hero-unit-white">
+<h1>Update Profile</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :address1, "Address"%>
+      <%= f.text_field :address1 %>
+
+      <%= f.label :pobox, "P.O.Box"%>
+      <%= f.text_field :pobox %>
+
+      <%= f.label :phone, "Mobile Number"%>
+      <%= f.text_field :phone %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+      <br></br>
+      <%= f.submit "Update", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+</div>

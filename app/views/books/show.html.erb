@@ -1,0 +1,37 @@
+<% provide(:title, @book.name) %>
+
+<div class="hero-unit-white">
+
+
+<h4><%= @book.name %></h4>
+
+<p><%= @book.description %></p>
+
+<br></br>
+
+<img src=<%=@book.photo%> alt=<%=@book.name%>>
+
+<br></br>
+
+<p>
+  <b>ISBN:</b>
+  <%= @book.isbn %>
+</p>
+<p>
+  <b>Author:</b>
+  <%= @book.author %>
+</p>
+<p>
+  <b>Edition:</b>
+  <%= @book.edition %>
+</p>
+<p>
+  <b>Retail Price:</b>
+  QR <%= @book.retail_price %>
+</p>
+
+<br></br>
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
+
+</div>

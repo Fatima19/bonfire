@@ -1,0 +1,15 @@
+== 67-373 Junior Project
+
+Bonfire is an online store to sell used books for Education City students.
+
+== Members & Roles
+
+Ali Naqi, Technical Lead
+
+Ammar Abouelghar, Design Lead
+
+Eman Al-Kuwari, Product Manager
+
+Fatima Fakhro, Project Manaeger
+
+Maher Hakim, Project Advisor

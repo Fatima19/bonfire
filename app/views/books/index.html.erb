@@ -1,0 +1,26 @@
+<% provide(:title, 'All Books') %> 
+
+<div class="hero-unit-white">
+
+
+<h1>Listing Books</h1>
+
+
+<ul class="books">
+    <% @books.each do |book| %>
+        <li>
+            <td><%= link_to book.name, book %> <% link_to book %></td>
+            	| <%= link_to "edit", edit_book_path(book) %>
+          		| <%= link_to "delete", book, method: :delete, confirm: "You sure?" %>
+        </li>
+    <% end %> 
+</ul>
+
+<br></br>
+<%= link_to "Add a Book", addbook_path, class: "btn btn-large btn-primary" %>
+
+
+
+<% res = Amazon::Ecs.item_search('9780470128701',  { :search_index => 'All', :response_group => 'Medium' })%>
+<% res.items%>
+</div>

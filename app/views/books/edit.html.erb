@@ -1,0 +1,42 @@
+<% provide(:title, 'Edit Book') %>
+
+<div class="hero-unit-white">
+
+
+<h1>Edit Book</h1>
+
+
+<%= form_for(@book, :html => { :multipart => true }) do |f| %>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@book) do |f| %>
+
+      <%= f.label :isbn, "ISBN" %>
+      <%= f.text_field :isbn %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :author %>
+      <%= f.text_field :author %>
+
+      <%= f.label :edition %>
+      <%= f.text_field :edition %>
+
+      <%= f.label :retail_price, "Retail Price" %>
+      <%= f.text_field :retail_price %>
+
+      <%= f.label :description%>
+      <%= f.text_field :description %>
+
+      <%= f.label :photo, "Image URL"%>
+      <%= f.text_field :photo %>
+
+      <%= f.submit "Update", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+<% end %>
+
+</div>

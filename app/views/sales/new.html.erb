@@ -1,0 +1,35 @@
+<% provide(:title, 'New Sale') %>
+
+<div class="hero-unit-white">
+
+
+<h1>New Sale</h1>
+
+<%= form_for(@sale, :html => { :multipart => true }) do |f| %>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@sale) do |f| %>
+
+      <%= f.label :book_id, "ISBN (without dashes)" %>
+      <%= f.text_field :book_id %>
+
+      <%= f.label :price %>
+      <%= f.text_field :price %>
+
+      <%= f.label :condition%>
+      <%= f.select :condition, ['New','Like New','Used'] %>
+
+    <%= f.label :charity, "Charity*"%>
+      <%= f.select :charity, [nil,'Qatar Red Crescent','QAWS', 'Reach Out To Asia (ROTA)', 'Qatar Charity'] %>
+<br></br>
+
+      <%= f.submit "Next", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+  </div>
+</div>
+<% end %>
+<p>* Selecting a charity, once book is purchased all proceeds will go to the charity of your choice</p>
+
+</div>

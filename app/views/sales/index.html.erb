@@ -1,0 +1,22 @@
+<% provide(:title, 'All Posts') %> 
+
+<div class="hero-unit-white">
+
+<h1>Listing Posts</h1>
+
+
+
+<ul class="posts">
+  <% @sales.each do |sale| %>
+    <li>
+      <td><%= link_to Book.find(sale.book_id).name, sale %> <% link_to sale %></td>
+          | <%= link_to "edit", edit_sale_path(sale) %>
+          | <%= link_to "delete", sale, method: :delete, confirm: "You sure?" %>
+    </li>
+  <% end %> 
+</ul>
+
+<br></br>
+<%= link_to "Sell a Book", newpost_path, class: "btn btn-large btn-primary" %>
+
+</div>
