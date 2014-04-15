@@ -1,6 +1,6 @@
 <% provide(:title, @user.name) %>
 
-<div class="hero-unit-white">
+
 
 <div id="contactinfo">
   <h1><%= @user.name %></h1>
@@ -18,9 +18,9 @@ Contact Details
    <p><b>Phone:</b> <%= @user.phone %> </p>
 </div>
 
-<div id="usersbooks">
+
   <h3> My Books </h3>
-  <ul id="booklist" class="posts">
+  <ul id="mybooks">
     <% current_sale.each do |sale| %>
       <li>
         <td><img src=<%=Book.find(sale.book_id).photo%>> <%= link_to Book.find(sale.book_id).name, sale %> <% link_to sale %></td>
@@ -36,9 +36,8 @@ Contact Details
 
   <br></br>
 
-
   <h3>Interests</h3>
-  <ul id="booklist" class="sales">
+  <ul id="interests">
   	<% @sales.each do |sale| %>
       <% if sale.user_id == @user.id %>
   		  <li>
@@ -49,10 +48,10 @@ Contact Details
     <% end %>
   </ul>
 
+
   <br></br>
 
   <% else %>
 
   <% end %>
-</div>
 </div>

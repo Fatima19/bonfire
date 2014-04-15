@@ -29,30 +29,35 @@
   width: 100%;
   height: 160px;
   background-color: #603813; /* background color will be black for all browsers */
-  background-image:url('/images/bonfire.png');
-  background-position: 10px 20px;
+  background-image:url('/images/bonfire1.png');
+  background-position: 25px 20px;
   background-repeat: no-repeat;
-  background-height:auto;
+  background-size: 9%;
   filter: none;
   border-top-style: solid;
   border-top-color: #603813;
 }
 
 .btn-primary {
-  color: white;
-  background-color: #603813; 
+  color: #CC9900;
+  background-color: #603813;
+  background-image: linear-gradient(to bottom,#603813,#603813);
+  background-repeat: repeat-x;
+  font-family: "bonfire";
+  font-size: 2em; 
 }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
-  color: #CC9900;
+  color: white;
   background-color: #603813;
-  *background-color: #603813;
+  background-image: linear-gradient(to bottom,#603813,#603813);
+  background-repeat: repeat-x;
 }
 
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  background-color: #CC9900;
+  background-color: #603813;
   color: white;
 }
 
@@ -73,6 +78,7 @@
   text-decoration: none;
   text-shadow: none;
 }
+
 
 .hero-unit-white {
   margin-bottom: 30px;
@@ -356,9 +362,7 @@ input {
   } 
 }
 
-.sales{
-  text-align: left;
-}
+
 
 /* Ammar and Fatima */
 
@@ -387,12 +391,8 @@ ul#booklist{
   margin:0;
   padding:0;
   overflow:hidden;
-  width:300px;
-  float: left;
-  
-
-
-  }
+  width:300px;  
+}
 
 ul#booklist li{
 display: inline-block;
@@ -415,7 +415,59 @@ ul#booklist li a
   text-align:center;
   line-height: 1;
   color: #603813;
+}
 
+/* Profile Page Book Lists*/
+
+ul#mybooks{
+  overflow:hidden;
+  width:300px;
+}
+
+#mybooks li{
+  display: inline-block;
+  font-family: "frutiger-thin";
+  font-size: 1.5em;
+  vertical-align: top;
+  float: left;
+}
+
+#mybooks img{
+  width: 50%;
+}
+
+#mybooks a{
+  width:50%;
+  display:inline-block;
+  text-align:center;
+  line-height: 1;
+  color: #603813;
+}
+
+
+ul#interests{
+  overflow:hidden;
+  width:300px;
+}
+
+#interests li{
+  display: inline-block;
+  font-family: "frutiger-thin";
+  font-size: 1.5em;
+  vertical-align: top;
+  float: left;
+}
+
+#interests img{
+  width: 50%;
+}
+
+#interests a{
+  width:50%;
+  display:inline-block;
+  text-align:center;
+  line-height: 1;
+  color: #603813;
 }
 
 
@@ -449,12 +501,12 @@ ul#booklist li a
 #userbooks{
   width:55%;
   float: right;
+  padding-left: 50%;
   }
 
 #userbooks h3{
   font-family: "bonfire";
   font-size: 3em;
-  text-align: left;
 }
 
 
@@ -466,5 +518,18 @@ ul#booklist li a
 .book_data{
   text-align: left;
   float:left;
+}
+#terms{
+  text-align: center;
+  font-size: 1em;
+  color: #cc9900;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.terms{
+width: 100%;
+position: relative;
+bottom: 5px;
 }
 
