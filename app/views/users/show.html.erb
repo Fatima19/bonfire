@@ -19,8 +19,9 @@ Contact Details
 </div>
 
 
-  <h3> My Books </h3>
+  
   <ul id="mybooks">
+    <h3> My Books </h3>
     <% current_sale.each do |sale| %>
       <li>
         <td><img src=<%=Book.find(sale.book_id).photo%>> <%= link_to Book.find(sale.book_id).name, sale %> <% link_to sale %></td>
@@ -36,20 +37,20 @@ Contact Details
 
   <br></br>
 
-  <h3>Interests</h3>
+  
   <ul id="interests">
+    <h3>Interests</h3>
   	<% @sales.each do |sale| %>
       <% if sale.user_id == @user.id %>
   		  <li>
       		<td><img src=<%=Book.find(sale.book_id).photo%>><%= link_to Book.find(sale.book_id).name, sale %> <% link_to sale %>
-          <p></p> Purchased from <%= link_to User.find(sale.owner_id).name, User.find(sale.owner_id) %></td>
+          <p></p><p id="purchasefrom">Purchased from <%= link_to User.find(sale.owner_id).name, User.find(sale.owner_id) %></p></td>
         </li>
       <% end %>
     <% end %>
+  
   </ul>
-
-
-  <br></br>
+  
 
   <% else %>
 

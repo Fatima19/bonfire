@@ -27,12 +27,12 @@
   position: fixed;
   bottom: 0px;
   width: 100%;
-  height: 160px;
+  height: 180px;
   background-color: #603813; /* background color will be black for all browsers */
   background-image:url('/images/bonfire1.png');
-  background-position: 25px 20px;
+  background-position: 25px 18px;
   background-repeat: no-repeat;
-  background-size: 9%;
+  background-size: 11%;
   filter: none;
   border-top-style: solid;
   border-top-color: #603813;
@@ -60,6 +60,58 @@
   background-color: #603813;
   color: white;
 }
+
+.dropdown-menu > li > a:hover{
+  background: #cc9900;
+}
+
+.navbar .nav> li > a:hover{
+  color: white;
+}
+
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+.dropdown-menu>li>a {
+  display: block;
+  padding: 2px 15px;
+  clear: both;
+  font-weight: normal;
+  font-family: "frutiger-book";
+  font-size: 16px;
+  line-height: 15px;
+  color: #603813;
+  white-space: nowrap;
+}
+.dropdown-menu > li > a:hover{
+  background: #cc9900;
+}
+
+
 
 .navbar-fixed-top .navbar-inner,
 .navbar-static-top .navbar-inner {
@@ -313,9 +365,10 @@ input {
 }
 
 #error_explanation {
-  color: #f00;
+  color: white;
   ul {
     list-style: none;
+    display: block;
     margin: 0 0 18px 0;
   }
 }
@@ -422,6 +475,12 @@ ul#booklist li a
 ul#mybooks{
   overflow:hidden;
   width:300px;
+  margin: 0;
+  padding: 50px;
+  border-bottom: 5px solid #603813;
+}
+#mybooks h3{
+  font-family: "frutiger-book";
 }
 
 #mybooks li{
@@ -444,10 +503,16 @@ ul#mybooks{
   color: #603813;
 }
 
-
 ul#interests{
   overflow:hidden;
   width:300px;
+  margin: 0;
+  padding: 50px;
+  border-bottom: 5px solid #603813;
+}
+
+#interests h3{
+  font-family: "frutiger-book";
 }
 
 #interests li{
@@ -459,7 +524,7 @@ ul#interests{
 }
 
 #interests img{
-  width: 50%;
+width: 55%;
 }
 
 #interests a{
@@ -468,6 +533,15 @@ ul#interests{
   text-align:center;
   line-height: 1;
   color: #603813;
+}
+
+#purchasefrom {
+  font-family: "frutiger-book";
+  font-size: inherit;
+}
+#purchasefrom a{
+  display: inline;
+  font-family: "frutiger-book";
 }
 
 
@@ -519,17 +593,28 @@ ul#interests{
   text-align: left;
   float:left;
 }
-#terms{
+#rights{
   text-align: center;
   font-size: 1em;
   color: #cc9900;
   width: 100%;
   position: absolute;
   bottom: 0;
+  font-family: "frutiger-book"; 
 }
-.terms{
+.rights{
 width: 100%;
 position: relative;
 bottom: 5px;
 }
+
+#terms{
+  font-family: "frutiger-book";
+}
+u:hover{
+  color:white;
+}
+
+
+
 
