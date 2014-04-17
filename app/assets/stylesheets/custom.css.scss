@@ -30,7 +30,7 @@
   height: 180px;
   background-color: #603813; /* background color will be black for all browsers */
   background-image:url('/images/bonfire1.png');
-  background-position: 25px 18px;
+  background-position: 25px 10px;
   background-repeat: no-repeat;
   background-size: 11%;
   filter: none;
@@ -589,6 +589,7 @@ width: 55%;
   text-align:center;
 }
 
+
 .book_data{
   text-align: left;
   float:left;
@@ -614,7 +615,19 @@ bottom: 5px;
 u:hover{
   color:white;
 }
-
-
-
+ul#booklist li a:hover{
+  background-color: #cc9900;
+  text-decoration: none;
+  color: white;
+}
+ul#mybooks li a:hover{
+  background-color: #cc9900;
+  text-decoration: none;
+  color: white;
+}
+ul#interests li a:hover{
+  background-color: #cc9900;
+  text-decoration: none;
+  color: white;
+}
 
