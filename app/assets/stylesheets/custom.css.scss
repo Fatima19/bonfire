@@ -14,6 +14,16 @@
   src: url('/fonts/frutiger-thin.otf');
 }
 
+@font-face {
+  font-family: 'frutiger-bold';
+  src: url('/fonts/frutiger-bold.otf');
+}
+
+@font-face {
+  font-family: 'frutiger-xbold';
+  src: url('/fonts/frutiger-xbold.otf');
+}
+
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -356,6 +366,11 @@ input, textarea, select, .uneditable-input {
   padding: 10px;
   margin-bottom: 15px;
   @include box_sizing;
+  color: #603813;
+  background: white;
+  font-family: "frutiger-thin";
+  font-size: 20px;
+
 }
 
 input {
@@ -364,14 +379,19 @@ input {
 
 }
 
-#error_explanation {
-  color: white;
+.alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  font-family: "frutiger-book";
   ul {
     list-style: none;
     display: block;
-    margin: 0 0 18px 0;
+    font-family: "frutiger-book";
   }
 }
+
+
 
 /* users index */
 .bands {
@@ -384,8 +404,10 @@ input {
     &:last-child {
       border-bottom: 1px solid gray;
     }
-} 
+  } 
 }
+
+
 
 .users {
   list-style: none;
@@ -429,7 +451,7 @@ input {
 }
 
 .container{  
-  max-width: 900px;
+  max-width: 1170px;
   margin: 2%; 
 }
 
@@ -584,16 +606,6 @@ width: 55%;
 }
 
 
-#bookpage p{
-  float: center;
-  text-align:center;
-}
-
-
-.book_data{
-  text-align: left;
-  float:left;
-}
 #rights{
   text-align: center;
   font-size: 1em;
@@ -630,4 +642,75 @@ ul#interests li a:hover{
   text-decoration: none;
   color: white;
 }
+
+
+/*book page*/
+
+#bookimage img{
+  border: 2px solid #603813;
+  width: 400px;
+  float: left;
+}
+
+#details{
+  float: right;
+  width: 500px;
+}
+
+#booktitle h1{
+  font-family: "frutiger-bold";
+  font-size: 2em;
+  line-height: 1;
+  margin-bottom: 0px;
+  clear: both;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+#booktitle h2{
+  font-family: "frutiger-book";
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  clear: both;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+
+
+#saleinfo h2{
+  font-family: "frutiger-book";
+  letter-spacing: 0px; 
+  padding-top: 20px;
+  text-align: left;
+  font-size: 20px;
+}
+
+#saleinfo h3{
+  font-family: "frutiger-book";
+  letter-spacing: 0px; 
+  padding-top: 20px;
+  text-align: left;
+  font-size: 20px;
+}
+
+#bookdescription p{
+  font-family: "frutiger-book";
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 1;
+}
+
+#bookdata p{
+  font-family: "frutiger-book";
+  letter-spacing: 0px; 
+  padding-top: 20px;
+  text-align: left;
+  font-size: 20px;
+}
+
+#buttons{
+
+}
+
 

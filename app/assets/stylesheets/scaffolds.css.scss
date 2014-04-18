@@ -1,6 +1,6 @@
 body {
    color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: "frutiger-book";
   font-size: 13px;
   line-height: 18px;
 }
@@ -20,7 +20,7 @@ pre {
 a {
   color: #000;
   &:visited {
-    color: #cc9900;
+
   }
   &:hover {
     color: #fff;
@@ -39,8 +39,7 @@ div {
 }
 
 .field_with_errors {
-  padding: 2px;
-  color: red;
+  color: white;
   display: table;
 }
 
@@ -49,7 +48,7 @@ div {
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  
+
   h2 {
     text-align: left;
     font-weight: bold;
